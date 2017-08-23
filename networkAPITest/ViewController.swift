@@ -105,6 +105,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        // change the liked status
         let selectedAlbum = networkController.albumData[indexPath.row]
         selectedAlbum.favorite = !selectedAlbum.favorite
         
